@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{07E25494
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C262FC6A-6B55-4CB3-9492-DC401A801894}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{7B2EE23E-6855-4401-9AAC-682138E56570}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{7B2EE23E-6855-4401-9AAC-682138E56570}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
