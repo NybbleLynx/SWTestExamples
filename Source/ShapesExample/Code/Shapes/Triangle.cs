@@ -1,5 +1,8 @@
 ﻿namespace Shapes
 {
+    /// <summary>
+    /// Defines an isosceles triangle in a basic format.
+    /// </summary>
     public class Triangle : IShape
     {
         /// <inheritdoc />

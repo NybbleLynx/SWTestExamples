@@ -1,5 +1,8 @@
 ﻿namespace Shapes
 {
+    /// <summary>
+    /// Defines a rectangle in a basic format.
+    /// </summary>
     public class Rectangle : IShape
     {
         /// <inheritdoc />
