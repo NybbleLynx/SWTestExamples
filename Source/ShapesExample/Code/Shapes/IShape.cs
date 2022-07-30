@@ -8,12 +8,12 @@
         /// <summary>
         /// Length of shape i.e. horizontal size.
         /// </summary>
-        int Length { set; }
+        double Length { set; }
 
         /// <summary>
         /// Height of shape i.e. vertical size.
         /// </summary>
-        int Height { set; }
+        double Height { set; }
 
         /// <summary>
         /// Calculates the circumference of the given shape using appropriate equation.

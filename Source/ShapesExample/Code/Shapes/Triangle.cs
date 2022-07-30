@@ -1,4 +1,7 @@
-﻿namespace Shapes
+﻿using System;
+using Shapes.Extensions;
+
+namespace Shapes
 {
     /// <summary>
     /// Defines an isosceles triangle in a basic format.
@@ -6,21 +9,26 @@
     public class Triangle : IShape
     {
         /// <inheritdoc />
-        public int Length { private get; set; }
+        /// <remarks>This is the base of the triangle.</remarks>
+        public double Length { private get; set; }
 
         /// <inheritdoc />
-        public int Height { private get; set; }
+        public double Height { private get; set; }
 
         /// <inheritdoc />
         public double CalculateCircumference()
         {
-            throw new System.NotImplementedException();
+            double adjacent = Length / 2;
+            double opposite = Height;
+
+            var hypotenuse = Math.Sqrt(opposite.Squared() + adjacent.Squared());
+            return Math.Round(hypotenuse, MidpointRounding.AwayFromZero);
         }
 
         /// <inheritdoc />
         public double CalculateArea()
         {
-            return (0.5 * Length) *Height;
+            return (Length/2) * Height;
         }
     }
 }

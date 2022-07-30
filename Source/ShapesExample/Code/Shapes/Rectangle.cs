@@ -6,10 +6,10 @@
     public class Rectangle : IShape
     {
         /// <inheritdoc />
-        public int Length { private get; set; }
+        public double Length { private get; set; }
 
         /// <inheritdoc />
-        public int Height { private get; set; }
+        public double Height { private get; set; }
 
         /// <inheritdoc />
         public double CalculateCircumference()

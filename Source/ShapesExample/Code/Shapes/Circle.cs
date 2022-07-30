@@ -1,4 +1,5 @@
 ﻿using System;
+using Shapes.Extensions;
 
 namespace Shapes
 {
@@ -8,10 +9,10 @@ namespace Shapes
     public class Circle : IShape
     {
         /// <inheritdoc />
-        public int Length { private get; set; }
+        public double Length { private get; set; }
 
         /// <inheritdoc />
-        public int Height { private get; set; }
+        public double Height { private get; set; }
 
         /// <inheritdoc />
         public double CalculateCircumference()
@@ -19,7 +20,8 @@ namespace Shapes
             ValidateCircle();
             var diameter = Length;
 
-            return Math.PI * diameter;
+            var circumference = Math.PI * diameter;
+            return Math.Round(circumference, MidpointRounding.AwayFromZero);
         }
 
         /// <inheritdoc />
@@ -28,13 +30,16 @@ namespace Shapes
             ValidateCircle();
             var radius = Length/2;
 
-            return Math.PI * (radius * radius);
+            var radiusSqr = radius.Squared();
+
+            var area = Math.PI * radiusSqr;
+            return Math.Round(area, MidpointRounding.AwayFromZero);
         }
 
         private void ValidateCircle()
         {
-            // Assume that shape is a circle. If dimensions aren't exact change height to equal length.
-            if (Length != Height)
+            // Assume that shape is a circle. If dimensions aren't exact, change height to equal length.
+            if (Math.Abs(Length - Height) != 0)
             {
                 Height = Length;
             }
